@@ -16,7 +16,7 @@ on:
 jobs:
   lint-and-validate:
     # Points to central ci-template repo
-    uses: hitesha1981/ci-templates/.github/workflows/kubeconform.yaml@kubeconform
+    uses: hitesha1981/ci-templates/.github/workflows/kubeconform.yaml@main
     with:
       kube_version: "1.31.0"
       strict: true
