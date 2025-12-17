@@ -1,0 +1,14 @@
+name: CI Validation
+on:
+  pull_request:
+    paths:
+      - '**.yaml'
+      - '**.yml'
+
+jobs:
+  lint-and-validate:
+    # Points to your central template repo
+    uses: hitesha1981/ci-templates/.github/workflows/kubeconform.yaml@kubeconform
+    with:
+      kube_version: "1.31.0"
+      strict: true
