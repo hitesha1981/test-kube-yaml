@@ -1,5 +1,5 @@
 ---
-name: CI Validation
+name: Test yamllint and kubeconform
 on:
   push:
     branches:
@@ -11,6 +11,7 @@ on:
     paths:
       - '**.yaml'
       - '**.yml'
+  workflow_dispatch: # Allows manual triggering      
 
 jobs:
   lint-and-validate:
